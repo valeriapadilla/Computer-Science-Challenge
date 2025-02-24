@@ -1,0 +1,8 @@
+using System.Text.RegularExpressions;
+public class Solution {
+    public string ReverseWords(string s) {
+        string cleanedWords = Regex.Replace(s.Trim(),@"\s+"," ");
+        string reverseWords = string.Join(" ",cleanedWords.Split(" ").Reverse());
+        return reverseWords;
+    }
+}
